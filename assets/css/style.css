@@ -1,0 +1,28 @@
+h1 {
+  padding: 40px;
+  font-size: 50px;
+  font-weight: bold;
+  color: blue;
+}
+h2 {
+  display: inline;
+}
+
+#tabella {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr); /* 10 colonne */
+  gap: 5px;
+  max-width: 100%;
+  margin: 7em;
+  background-color: rgb(159, 159, 255);
+  padding: 50px;
+}
+.cella {
+  background-color: #1ca362;
+  border: 1px solid #ff0f07;
+  padding: 40px;
+  text-align: center;
+  font-size: 1.2rem;
+  border-radius: 4px;
+  max-width: 80%;
+}
