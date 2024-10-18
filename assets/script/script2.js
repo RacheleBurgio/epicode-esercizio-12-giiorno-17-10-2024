@@ -24,12 +24,22 @@ const newButton = () => {
   const drawNumber = () => {
     const randomNumber = Math.floor(Math.random() * 76) + 1
     console.log(randomNumber)
-    //sia un if che un for
     const allCells = document.getElementsByClassName('cella')
     for (let i = 0; i < allCells.length; i++) {
       if (randomNumber === parseInt(allCells[i].innerText)) {
         allCells[i].style.backgroundColor = 'red'
+      } else {
+        while (drawnNumbers.includes(randomNumber)) {
+          randomNumber = Math.floor(Math.random() * maxNumbers) + 1
+        }
+        for (let j = 0; j < allCells.length; j++) {
+          if (randomNumber === parseInt(allCells[j].innerText)) {
+            allCells[j].style.backgroundColor = 'red'
+            break
+          }
+        }
       }
+      break
     }
   }
   newButton.addEventListener('click', drawNumber)
